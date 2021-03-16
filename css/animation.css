@@ -1,0 +1,55 @@
+/*ANIMAÇÃO DAS JANELAS*/
+[data-click].active{
+    background-color: #56cc9d;
+    color: white;
+    border: #56cc9d;
+}
+
+[data-target]{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-target].active{
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
+    position: relative;
+    top: auto;
+    transform: translate3d(0, 0,0);
+}
+
+/*ANIMAÇÃO DO MENU*/
+.mobile-btn.active{
+    border-top-color: transparent;
+}
+.mobile-btn.active::after{
+    margin-top: 0px;
+    top: 2px;
+    transform: rotate(45deg);
+}
+.mobile-btn.active::before{
+    margin-top: 0px;
+    top: 6px;
+    transform: rotate(135deg);
+}
+
+/*ANIMAÇÃO DO SLIDE*/
+.slide > .active{
+	position: relative;
+	opacity: 1;
+}
+
+[data-anime]{
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+    transition: .3s;
+}
+
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
